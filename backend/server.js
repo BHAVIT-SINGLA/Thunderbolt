@@ -13,10 +13,14 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/All-In-ONE', {
+mongoose.connect('mongodb+srv://dbUser:flipkart@cluster0.zyrrf.mongodb.net/mernstack?retryWrites=true&w=majority', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
+}).then(() => {
+  console.log(`Connection To DB Successful`);
+}).catch((err) => {
+  console.log(err)
 });
 
 
