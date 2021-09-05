@@ -37,7 +37,7 @@ function App() {
         <header className="row">
           <div>
           <Link className="brand" to="/">
-              ShopItBuddy
+              Flippkart
               </Link>
           </div>
           <div>

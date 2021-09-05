@@ -16,8 +16,6 @@ GitHub code size in bytes->
 
 <h1>WEBSITE LINK</h1>
 
-https://shopitbuddy.herokuapp.com/
-
 <h2>Features</h2>
 <h4>1) User-friendly and serviceable frontend UI</h4>
 <h4>1) Payment integration using PayPal.</h4>
@@ -39,8 +37,6 @@ delivery partners can deliver the same to the mentioned locations.
 ### Shivam Singla
 
 ### Akash Singh
-
-### Vihaan Misra
 
 ### Bhavit Singla
 
