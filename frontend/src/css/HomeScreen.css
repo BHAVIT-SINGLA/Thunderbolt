@@ -9,14 +9,14 @@
   align-content: space-around;
   flex-grow: 1;
   flex-shrink: 1;
-  flex-basis: 1 1 0;
+  flex-basis: 0;
 }
 
 .card-hs {
   /* width: 25%; */
   height: 30%;
-  width: 25%;
-  flex-basis: 25%;
+  /* width: 25%; */
+  /* flex-basis: 25%; */
   flex-grow: 1;
   border-radius: 20px;
   border: solid;
@@ -27,6 +27,9 @@
   overflow: hidden;
   transition: transform 0.5s;
   align-items: center;
+
+  max-width: 350px;
+  word-wrap: break-word;
   @media (min-width: 40rem) {
     width: 50%;
   }
@@ -60,4 +63,6 @@
   flex-direction: column;
   padding: 1rem;
   line-height: 1.5em;
+}
+.card-title-hs {
 }

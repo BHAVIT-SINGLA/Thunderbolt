@@ -17,7 +17,7 @@ export default function Product(props) {
       <div className="card-info-hs">
         
         <Link to={`/product/${product._id}`}>
-          <div>{product.name}</div>
+          <div className="card-title-hs">{product.name}</div>
         
         </Link>
         <Rating
