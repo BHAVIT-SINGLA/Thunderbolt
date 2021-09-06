@@ -6,7 +6,7 @@ import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 import Rating from '../components/Rating';
 
-
+import '../css/ProductScreen.css'
 export default function ProductScreen(props) {
   const dispatch = useDispatch();
   const productId = props.match.params.id;
@@ -31,11 +31,11 @@ export default function ProductScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <div>
-          <Link to="/">Back to result</Link>
+          {/* <Link to="/">Back to result</Link> */}
           <div className="row top">
             <div className="col-2">
               <img
-                className="large"
+                className="img-ps medium"
                 src={product.image}
                 alt={product.name}
               ></img>
@@ -51,7 +51,7 @@ export default function ProductScreen(props) {
                     numReviews={product.numReviews}
                   ></Rating>
                 </li>
-                <li>Pirce : ₹{product.price}</li>
+                <li>Price : ₹{product.price}</li>
                 <li>
                   Description:
                   <p>{product.description}</p>

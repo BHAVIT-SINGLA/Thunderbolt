@@ -1,0 +1,59 @@
+#main {
+  margin-top: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.img-ps {
+  width: 45%;
+  height: 60%;
+  margin: 4%;
+  padding: 4%;
+}
+#description {
+  margin-top: 10px;
+}
+#description input {
+  display: block;
+  margin-bottom: 3px;
+}
+#company_name {
+  text-decoration: underline;
+  margin-bottom: 0;
+}
+
+#product_info {
+  color: brown;
+  margin-top: 10;
+}
+#product_info h2 {
+  margin: 20px;
+}
+#product_info h3,
+p {
+  margin: 20px;
+}
+
+#icons i {
+  color: gold;
+}
+#service i {
+  color: cornflowerblue;
+  border: 1px solid gainsboro;
+  border-radius: 20px;
+  margin-right: 80px;
+  padding: 10px;
+}
+#service p {
+  display: inline;
+  color: cornflowerblue;
+  margin-left: 0;
+}
+#id .btn {
+  width: 45%;
+}
+footer a:hover {
+  text-decoration: none;
+  color: white;
+}
