@@ -63,8 +63,8 @@ export default function ProductScreen(props) {
                 <ul>
                   <li>
                     <div className="row">
-                      <div>Price</div>
-                      <div className="price">₹{product.price}</div>
+                      <div>Price(Per Item)</div>
+                      <div className="price">₹{product.price*qty}</div>
                     </div>
                   </li>
                   <li>
