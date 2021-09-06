@@ -32,8 +32,8 @@ export default function ProductScreen(props) {
       ) : (
         <div>
           {/* <Link to="/">Back to result</Link> */}
-          <div className="row top">
-            <div className="col-2">
+          <div className="row container-ps">
+            <div className="col-1">
               <img
                 className="img-ps medium"
                 src={product.image}
@@ -58,8 +58,8 @@ export default function ProductScreen(props) {
                 </li>
               </ul>
             </div>
-            <div className="col-1">
-              <div className="card card-body">
+            <div className="col-1 addtocart-ps">
+              <div className="card-ps card-body">
                 <ul>
                   <li>
                     <div className="row">
