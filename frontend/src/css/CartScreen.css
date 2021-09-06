@@ -34,3 +34,15 @@
   padding: 1%;
   margin: 1%;
 }
+.btn-cart {
+  color: white;
+  background-color: darkgoldenrod;
+  width: 80%;
+}
+.subtot-cart {
+  font-size: 170%;
+}
+
+.tit-cart {
+  font-size: 200%;
+}
