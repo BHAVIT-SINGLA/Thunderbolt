@@ -4,7 +4,7 @@ export default function Rating(props) {
   const { rating, numReviews } = props;
   return (
     <div className="rating">
-      <span>
+      {/* <span>
         <i
           className={
             rating >= 1
@@ -58,8 +58,8 @@ export default function Rating(props) {
               : 'fa fa-star-o'
           }
         ></i>
-      </span>
-      <span>{numReviews + ' reviews'}</span>
+      </span> */}
+      <div>{numReviews + ' Reviews'}</div>
     </div>
   );
 }
