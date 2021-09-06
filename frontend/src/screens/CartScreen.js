@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
-// import './css-files/cart.css';
+import '../css/CartScreen.css';
 
 export default function CartScreen(props) {
   const productId = props.match.params.id;
@@ -122,20 +122,21 @@ export default function CartScreen(props) {
           </MessageBox>
         ) : (
           <ul>
+            <div className="row container-ps">
             {cartItems.map((item) => (
-              <li key={item.product}>
-                <div classNameName="row">
-                  <div>
+              <li className=" card-cart " key={item.product}>
+                  <div className="col-1">
                     <img
                       src={item.image}
                       alt={item.name}
-                      classNameName="small"
+                      className="img-ps medium"
                     ></img>
                   </div>
-                  <div classNameName="min-30">
+                  <div>
+                  <div className="col-1 center">
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
                   </div>
-                  <div>
+                  <div>Qty &nbsp; 
                     <select
                       value={item.qty}
                       onChange={(e) =>
@@ -150,9 +151,9 @@ export default function CartScreen(props) {
                         </option>
                       ))}
                     </select>
-                  </div>
-                  <div>₹{item.price}</div>
-                  <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                  Price(per Item) : ₹{item.price}
+                  &nbsp;&nbsp;&nbsp;&nbsp;
                     <button
                       type="button"
                       onClick={() => removeFromCartHandler(item.product)}
@@ -160,9 +161,11 @@ export default function CartScreen(props) {
                       Delete
                     </button>
                   </div>
-                </div>
+                  </div>
+                
               </li>
             ))}
+            </div>
           </ul>
         )}
       </div>
