@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveShippingAddress } from '../actions/cartActions';
 import CheckoutSteps from '../components/CheckoutSteps';
+import { BrowserRouter, Link, Route } from 'react-router-dom';
+
+
+
 
 export default function ShippingAddressScreen(props) {
   const userSignin = useSelector((state) => state.userSignin);
@@ -27,10 +31,17 @@ export default function ShippingAddressScreen(props) {
   return (
     <div>
       <CheckoutSteps step1 step2></CheckoutSteps>
-      <form className="form" onSubmit={submitHandler}>
-        <div>
+      <div>
           <h1>Shipping Address</h1>
         </div>
+        <Link to="/shippingconversational"><button >
+            Proceed with Conversational Method
+      </button></Link>
+      
+
+      <form className="form" onSubmit={submitHandler}>
+        
+        
         <div>
           <label htmlFor="fullName">Full Name</label>
           <input
