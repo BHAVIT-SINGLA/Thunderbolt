@@ -67,7 +67,7 @@ async function runSample(projectId = 'conersational-chat-naiv') {
 
   // Create a new session
   const sessionClient = new dialogflow.SessionsClient({
-      keyFilename:"D:/Github Projects/Thunderbolt/backend/conersational-chat-naiv-507565148141.json"
+      keyFilename:path.join(__dir, '/backend/conersational-chat-naiv-507565148141.json')
   });
   const sessionPath = sessionClient.projectAgentSessionPath(
     projectId,
