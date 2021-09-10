@@ -37,11 +37,11 @@ app.use('/api/orders', orderRouter);
 app.get('/api/config/paypal', (req, res) => {
   res.send(process.env.PAYPAL_CLIENT_ID || 'sb');
 });
-const __dir = path.resolve();
-app.use('/uploads', express.static(path.join(__dir, '/uploads')));
-app.use(express.static(path.join(__dir, '/frontend/build')));
+const __dirname = path.resolve();
+app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+app.use(express.static(path.join(__dirname, '/frontend/build')));
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dir, '/frontend/build/index.html'))
+  res.sendFile(path.join(__dirname, '/frontend/build/index.html'))
 );
 
 app.use((err, req, res, next) => {
@@ -67,7 +67,7 @@ app.listen(port, () => {
 
 //   // Create a new session
 //   const sessionClient = new dialogflow.SessionsClient({
-//       keyFilename:path.join(__dir, '/backend/conersational-chat-naiv-507565148141.json')
+//       keyFilename:path.join(__dirname, '/backend/conersational-chat-naiv-507565148141.json')
 //   });
 //   const sessionPath = sessionClient.projectAgentSessionPath(
 //     projectId,
