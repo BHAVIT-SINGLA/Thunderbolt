@@ -8,9 +8,9 @@ import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 
 // import dialogflow from '@google-cloud/dialogflow';
-import {v4 as uuidv4} from 'uuid';
-console.log("Hello this is console")
-console.log(uuidv4());
+// import {v4 as uuidv4} from 'uuid';
+// console.log("Hello this is console")
+// console.log(uuidv4());
 
 dotenv.config();
 
