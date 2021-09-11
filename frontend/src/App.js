@@ -24,7 +24,8 @@ import SellerRoute from './components/SellerRoute';
 import SearchBox from './components/SearchBox';
 import SearchScreen from './screens/SearchScreen';
 
-function App() {
+function App() 
+{
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
@@ -33,6 +34,7 @@ function App() {
   const signoutHandler = () => {
     dispatch(signout());
   };
+  
   return (
     <BrowserRouter>
       <div className="grid-container">
@@ -77,6 +79,7 @@ function App() {
               </div>
             ) : (
               <Link to="/signin">Sign In</Link>
+              
             )}
             {userInfo && userInfo.isSeller && (
               <div className="dropdown">
@@ -93,6 +96,7 @@ function App() {
                 </ul>
               </div>
             )}
+
             {userInfo && userInfo.isAdmin && (
               <div className="dropdown">
                 <Link to="#admin">
