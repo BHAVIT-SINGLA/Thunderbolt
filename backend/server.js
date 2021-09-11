@@ -6,6 +6,9 @@ import productRouter from './routers/productRouter.js';
 import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
+import bodyParser from 'body-parser';
+import pkg from 'dialogflow-fulfillment';
+const {WebhookClient} = pkg;
 
 
 dotenv.config();
@@ -44,12 +47,27 @@ app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
 });
 
+app.post('/dialogflow-fulfillment', (request, response) => {
+  dialogflowFulfillment(request, response)
+})
+
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Serve at http://localhost:${port}`);
 });
 
+const dialogflowFulfillment = (request, response) => {
+  const agent = new WebhookClient({request, response})
 
+  function sayHello(agent){
+      agent.add("Hello, this was a nice tutorial by axlewebtech")
+  }
+
+  let intentMap = new Map();
+  intentMap.set("Default Welcome Intent", sayHello)
+  agent.handleRequest(intentMap)
+
+}
 
 // import dialogflow from '@google-cloud/dialogflow';
 // import {v4 as uuidv4} from 'uuid';
