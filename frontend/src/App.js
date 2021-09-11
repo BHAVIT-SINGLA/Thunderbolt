@@ -15,44 +15,32 @@ import ProductScreen from './screens/ProductScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import RegisterScreen from './screens/RegisterScreen';
 import ShippingAddressScreen from './screens/ShippingAddressScreen';
-import ShippingAddressScreenConversational from './screens/ShippingAddressScreenConversational';
-import UserListScreen from './screens/UserListScreen';
 import SigninScreen from './screens/SigninScreen';
 import ProductEditScreen from './screens/ProductEditScreen';
 import OrderListScreen from './screens/OrderListScreen';
-import SearchBox from './components/SearchBox';
-import SearchScreen from './screens/SearchScreen';
+import UserListScreen from './screens/UserListScreen';
+import UserEditScreen from './screens/UserEditScreen';
 
 function App() {
   const cart = useSelector((state) => state.cart);
   const { cartItems } = cart;
-
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
   const signoutHandler = () => {
     dispatch(signout());
   };
-
   return (
-    
     <BrowserRouter>
       <div className="grid-container">
         <header className="row">
           <div>
-          <Link className="brand" to="/">
-              Flippkart
-              </Link>
+            <Link className="brand" to="/">
+              amazona
+            </Link>
           </div>
           <div>
-            <Route
-              render={({ history }) => (
-                <SearchBox history={history}></SearchBox>
-              )}
-            ></Route>
-          </div>
-          <div>
-          <Link to="/cart">
+            <Link to="/cart">
               Cart
               {cartItems.length > 0 && (
                 <span className="badge">{cartItems.length}</span>
@@ -64,10 +52,10 @@ function App() {
                   {userInfo.name} <i className="fa fa-caret-down"></i>{' '}
                 </Link>
                 <ul className="dropdown-content">
-                <li>
+                  <li>
                     <Link to="/profile">User Profile</Link>
                   </li>
-                <li>
+                  <li>
                     <Link to="/orderhistory">Order History</Link>
                   </li>
                   <li>
@@ -86,24 +74,27 @@ function App() {
                   Admin <i className="fa fa-caret-down"></i>
                 </Link>
                 <ul className="dropdown-content">
-                 
+                  <li>
+                    <Link to="/dashboard">Dashboard</Link>
+                  </li>
                   <li>
                     <Link to="/productlist">Products</Link>
                   </li>
                   <li>
                     <Link to="/orderlist">Orders</Link>
                   </li>
-                  
+                  <li>
+                    <Link to="/userlist">Users</Link>
+                  </li>
                 </ul>
               </div>
             )}
           </div>
-        
         </header>
         <main>
-        <Route path="/cart/:id?" component={CartScreen}></Route>
-        <Route path="/product/:id" component={ProductScreen} exact></Route>
-        <Route
+          <Route path="/cart/:id?" component={CartScreen}></Route>
+          <Route path="/product/:id" component={ProductScreen} exact></Route>
+          <Route
             path="/product/:id/edit"
             component={ProductEditScreen}
             exact
@@ -111,16 +102,10 @@ function App() {
           <Route path="/signin" component={SigninScreen}></Route>
           <Route path="/register" component={RegisterScreen}></Route>
           <Route path="/shipping" component={ShippingAddressScreen}></Route>
-          <Route path="/shippingconversational" component={ShippingAddressScreenConversational}></Route>
           <Route path="/payment" component={PaymentMethodScreen}></Route>
           <Route path="/placeorder" component={PlaceOrderScreen}></Route>
           <Route path="/order/:id" component={OrderScreen}></Route>
           <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
-          <Route
-            path="/search/name/:name?"
-            component={SearchScreen}
-            exact
-          ></Route>
           <PrivateRoute
             path="/profile"
             component={ProfileScreen}
@@ -134,12 +119,15 @@ function App() {
             component={OrderListScreen}
           ></AdminRoute>
           <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
+          <AdminRoute
+            path="/user/:id/edit"
+            component={UserEditScreen}
+          ></AdminRoute>
           <Route path="/" component={HomeScreen} exact></Route>
         </main>
-        <footer className="row center">All right reserved © Flippkart </footer>
+        <footer className="row center">All right reserved</footer>
       </div>
     </BrowserRouter>
   );
 }
-
 export default App;
