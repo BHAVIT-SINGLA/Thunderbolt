@@ -26,12 +26,12 @@ export default function SearchScreen(props) {
         )}
       </div>
       <div className="row top">
-        <div className="col-1">
+        {/* <div className="col-1">
           <h3>Department</h3>
           <ul>
-            <li>Categoey 1</li>
+            <li>Category 1</li>
           </ul>
-        </div>
+        </div> */}
         <div className="col-3">
           {loading ? (
             <LoadingBox></LoadingBox>

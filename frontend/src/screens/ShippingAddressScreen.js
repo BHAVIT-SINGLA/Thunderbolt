@@ -31,22 +31,27 @@ export default function ShippingAddressScreen(props) {
   return (
     <div>
       <CheckoutSteps step1 step2></CheckoutSteps>
-      <div>
+      {/* <div>
           <h1>Shipping Address</h1>
-        </div>
-        <Link to="/shippingconversational"><button >
+          </div> */}
+        {/* <Link to="/shippingconversational"><button >
             Proceed with Conversational Method
-      </button></Link>
+      </button></Link> */}
       
+     
+      <form className="form" onSubmit={submitHandler}>
+      <div>
+      <h1>Chatbot Form Filling</h1>
+    </div>
       <iframe
-    allow="microphone;"
-    width="350"
+      allow="microphone;"
+    width="580"
     height="430"
     src="https://console.dialogflow.com/api-client/demo/embedded/962f27f9-6797-4aa3-aa9c-53fa188dd92c">
-</iframe>
-      <form className="form" onSubmit={submitHandler}>
-        
-        
+    </iframe>
+    <div>
+          <h1> Manual Form Filling </h1>
+    </div>
         <div>
           <label htmlFor="fullName">Full Name</label>
           <input
@@ -65,7 +70,7 @@ export default function ShippingAddressScreen(props) {
             id="address"
             placeholder="Enter address"
             value={address}
-            onChange={(e) => setAddress(e.target.value)}
+           onChange={(e) => setAddress(e.target.value)}
             required
           ></input>
         </div>
@@ -75,9 +80,9 @@ export default function ShippingAddressScreen(props) {
             type="text"
             id="city"
             placeholder="Enter city"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-            required
+           value={city}
+           onChange={(e) => setCity(e.target.value)}
+           required
           ></input>
         </div>
         <div>
@@ -86,9 +91,9 @@ export default function ShippingAddressScreen(props) {
             type="text"
             id="postalCode"
             placeholder="Enter postal code"
-            value={postalCode}
-            onChange={(e) => setPostalCode(e.target.value)}
-            required
+           value={postalCode}
+           onChange={(e) => setPostalCode(e.target.value)}
+           required
           ></input>
         </div>
         <div>
@@ -98,8 +103,8 @@ export default function ShippingAddressScreen(props) {
             id="country"
             placeholder="Enter country"
             value={country}
-            onChange={(e) => setCountry(e.target.value)}
-            required
+           onChange={(e) => setCountry(e.target.value)}
+           required
           ></input>
         </div>
         <div>
@@ -109,6 +114,7 @@ export default function ShippingAddressScreen(props) {
           </button>
         </div>
       </form>
+    
     </div>
   );
 }
