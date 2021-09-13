@@ -41,7 +41,7 @@ function App()
         <header className="row">
           <div>
             <Link className="brand" to="/">
-              flippkart
+            Flippkart
             </Link>
           </div>
           <div>
