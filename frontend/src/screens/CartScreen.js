@@ -27,6 +27,9 @@ export default function CartScreen(props) {
   const checkoutHandler = () => {
     props.history.push('/signin?redirect=shipping');
   };
+  const checkoutHandler_conversational= () => {
+    props.history.push('/signin?redirect=shipping_conersational');
+  };
   return (
     
     <div classNameName="row top">
@@ -94,6 +97,17 @@ export default function CartScreen(props) {
                 Subtotal ({cartItems.reduce((a, c) => a + c.qty, 0)} items) : ₹
                 {cartItems.reduce((a, c) => a + c.price * c.qty, 0)}
               </h2>
+            </li>
+            <li><button
+                type="button"
+                onClick={checkoutHandler_conversational}
+                // classNameName="primary block"
+                className="btn-cart"
+                disabled={cartItems.length === 0}
+              >
+                Proceed to Checkout with Conversational App
+              </button>
+              
             </li>
             <li><button
                 type="button"
