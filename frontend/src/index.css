@@ -76,6 +76,7 @@ button {
 button {
   background-color: #f8f8f8;
   cursor: pointer;
+  color: white;
 }
 input:hover,
 select:hover,
