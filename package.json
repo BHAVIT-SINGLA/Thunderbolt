@@ -5,6 +5,8 @@
   "description": "Theme 1: You plan to start an essentials delivery system. Develop an\r App or a Website where people can order the listed essential goods &\r delivery partners can deliver the same to the mentioned locations.",
   "main": "index.js",
   "scripts": {
+    "test":"mocha backend/test",
+    "coverage":"nyc --reporter=html npm run test",
     "build": "cd frontend && npm install && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
@@ -25,6 +27,7 @@
     "bcryptjs": "^2.4.3",
     "body": "^5.1.0",
     "body-parser": "^1.19.0",
+    "chai": "^4.3.4",
     "dialogflow": "^1.2.0",
     "dialogflow-fulfillment": "^0.6.1",
     "dotenv": "^8.2.0",
@@ -32,8 +35,10 @@
     "express-async-handler": "^1.1.4",
     "firebase-functions": "^3.15.5",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^9.1.1",
     "mongoose": "^5.10.11",
     "multer": "^1.4.2",
+    "nyc": "^15.1.0",
     "parser": "^0.1.4",
     "react-uuid": "^1.0.2",
     "uuid": "^8.3.2"
