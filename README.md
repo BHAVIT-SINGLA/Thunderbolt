@@ -1,14 +1,11 @@
-
+<!-- 
 [![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-<!-- [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][(https://www.linkedin.com/in/akash-singh-65b521191)]][linkedin-url] -->
+[![Forks][forks-shield]][forks-url] -->
+[![Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 
 
   
- <h2 align="center">Readme</h2>
+ <h2 align="center">Please Readme</h2>
 <!-- PROJECT LOGO -->
 <!-- <br />
 <p align="center">
@@ -33,7 +30,7 @@
 </p> -->
 
 <!-- TABLE OF CONTENTS -->
-<details open="open">
+<!-- <details open="open">
   <summary>Table of Contents</summary>
   <ol>
     <li>
@@ -56,7 +53,7 @@
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
-</details>
+</details> -->
 
 <!-- ABOUT THE PROJECT -->
 
@@ -64,20 +61,17 @@
 
 [![Product Name Screen Shot][photo lagayenge yaha]](https://example.com)
 
-project ke bare me likhenge
+In this digital era customer expects an interactive and dynamically powered conversational user experience for typical form-filling  environment in spite of the regular data inputs such as survey/feedback forms, payment methods.
 
 ### Built With
-
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 - [Bootstrap](https://getbootstrap.com)
 - [JQuery](https://jquery.com)
 - [Laravel](https://laravel.com)
-- dialogeflow
-- react
-- redux
-- mongoDB
-- 
+- [dialogeflow](https://cloud.google.com/dialogflow)
+- [react](https://reactjs.org/)
+- [redux](https://redux.js.org/)
+- [mongoDB](https://www.mongodb.com/)
 
 <!-- GETTING STARTED -->
 
@@ -137,23 +131,21 @@ This is an example of how to list things you need to use the software and how to
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+2. Commit your Changes (`git commit -m 'Add some Feature'`)
+3. Push to the Branch (`git push`)
+4. Open a Pull Request
 
 <!-- LICENSE -->
 
 
 ## Contributors
 
-[Shivam Singla](https://github.com/seneark)
+[Shivam Singla](https://github.com/shivam7374)
 
-[Akash Singh](https://github.com/MridulC)
+[Akash Singh](https://github.com/Akashsingh310)
 
-[Bhavit Singla](https://github.com/NaveenKumar519)
-
-## Refrences
+[Bhavit Singla](https://github.com/BHAVIT-SINGLA)
+<!-- ## Refrences -->
 <!-- 
 - [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 - [Img Shields](https://shields.io)
