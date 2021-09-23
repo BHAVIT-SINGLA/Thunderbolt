@@ -59,7 +59,13 @@
 
 ## About The Project
 
-[![Product Name Screen Shot][photo lagayenge yaha]](https://example.com)
+![image preview](https://github.com/Akashsingh310/Thunderbolt/blob/main/images/1.gif)  
+
+
+
+
+![image preview](https://github.com/Akashsingh310/Thunderbolt/blob/main/images/2.gif)
+
 
 In this digital era customer expects an interactive and dynamically powered conversational user experience for typical form-filling  environment in spite of the regular data inputs such as survey/feedback forms, payment methods.
 
